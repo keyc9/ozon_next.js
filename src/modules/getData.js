@@ -1,6 +1,6 @@
-const getData = () => {
-    //  fetch('http://localhost:3000/goods')
-     fetch('http://test-45cff-default-rtdb.firebaseio.com/goods.json')
+const getData = (str) => {
+     fetch(`http://localhost:3000/goods${str ? `rearch=${str}` : ''}`)
+    //  fetch('http://test-45cff-default-rtdb.firebaseio.com/goods.json')
       .then((response) => {
         return response.json()}
     )
